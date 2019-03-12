@@ -10,13 +10,19 @@
 	margin-bottom: 20px;
 }
 
-.list-group-title .btn {
-    margin-bottom: 5px;
+.list-group-header {
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
 }
 
-.list-group-title span {
-	font-size: 24px;
- 	margin-bottom: 10px;
+.list-group-header .title {
+    font-size: 30px;
+    line-height: 28px;
+}
+
+.list-group-header .description {
+    font-size: 18px;
 }
 
 form {
