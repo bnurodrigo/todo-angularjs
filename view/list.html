@@ -1,0 +1,28 @@
+<div class="fluid-container">
+    <div class="col-sm">
+        <div class="row">
+            <div class="empty-list" ng-if="lists.length === 0">
+                No list has been created yet.
+            </div>
+            <div class="col list-group-block" ng-repeat="(listKey, list) in lists">
+                <div class="list-group-title">
+                    <div class="row">
+                        <div class="col">
+                            <span>{{::list.name}}</span>
+                        </div>
+                        <div class="col text-right">
+                            <a class="btn btn-primary" href="#!/update/{{listKey}}">Edit</a>
+                            <button class="btn btn-danger" ng-click="removeList(lists, listKey)">Remove</button>
+                        </div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="(itemKey, item) in list.items" ng-class="{'completed': item.completed}"
+                            ng-click="changeCompleted(lists, listKey, itemKey)">
+                            <span>{{::item.description}}</span>
+                            <div class="float-right" ng-show=item.completed>COMPLETED!</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

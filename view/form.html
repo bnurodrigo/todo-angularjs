@@ -1,0 +1,25 @@
+<div class="fluid-container" ng-controller="listController">
+    <div class="col-sm">
+        <form name="listForm" novalidate>
+            <div class="form-group">
+                <label for="listName">List Name</label>
+                <input type="text" class="form-control" name="name" id="listName" ng-model="list.name" ng-required="true" />
+                <div ng-show="listForm.name.$error.required && listForm.name.$dirty" class="invalid-feedback">Please choose a list name.</div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" ng-click="addItem(list)">Add Item</button>
+            </div>
+            <div class="form-group" ng-repeat="item in list.items">
+                <label for="itemDescription{{$index}}">Item Description</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="itemDescription{{$index}}" ng-model="list.items[$index].description" name="description" />
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-danger" ng-click="removeItem(list, $index)">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <button class="btn btn-primary" ng-click="createList(list)" ng-disabled="listForm.$invalid">Create List</button>
+        </form>
+    </div>
+</div>
