@@ -12,17 +12,47 @@
 
 .list-group-header {
     padding: 15px;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     color: #fff;
 }
 
 .list-group-header .title {
     font-size: 30px;
-    line-height: 28px;
 }
 
 .list-group-header .description {
-    font-size: 18px;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.list-group .list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group .list-group-item:last-child {
+    border-bottom-color: #007bff;
+}
+
+.list-group .list-group-item {
+    cursor: pointer;
+    border-left-color: #007bff;
+    border-right-color: #007bff;
+}
+
+.list-group .list-group-item .title {
+    font-size: 20px;
+}
+
+.list-group .list-group-item .description {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.list-group .list-group-item.completed div {
+    text-decoration: line-through;
+    color: #ccc;
 }
 
 form {
@@ -43,18 +73,4 @@ form {
 
 .invalid-feedback {
     display: block;
-}
-
-.list-group-item {
-    cursor: pointer;
-}
-
-.list-group-item.completed span {
-    text-decoration: line-through;
-    color: #ccc;
-}
-
-.list-group-item.completed div {
-    color: #28a745;
-    font-weight: 600;
 }

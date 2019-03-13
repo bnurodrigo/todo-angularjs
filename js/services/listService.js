@@ -2,20 +2,22 @@ angular.module('todoList').factory('listService', function () {
     var lists = [
         {
             name: "List 1",
+            description: "Description 1",
             items: [
-                {description: "Item 1", completed: true}, 
-                {description: "Item 2", completed: true}, 
-                {description: "Item 3", completed: true}, 
-                {description: "Item 4", completed: false}, 
-                {description: "Item 5", completed: false}
+                {name: "Item 1", description: "Description 1", completed: true}, 
+                {name: "Item 2", description: "Description 2", completed: true}, 
+                {name: "Item 3", description: "Description 3", completed: true}, 
+                {name: "Item 4", description: "Description 4", completed: false}, 
+                {name: "Item 5", description: "Description 5", completed: false}
             ]
         },
         {
             name: "List 2",
+            description: "Description 2",
             items: [
-                {description: "Item 1", completed: true},
-                {description: "Item 2", completed: false},
-                {description: "Item 3", completed: false}
+                {name: "Item 1", description: "Description 1", completed: true},
+                {name: "Item 2", description: "Description 2", completed: false},
+                {name: "Item 3", description: "Description 3", completed: false}
             ]
         }
     ];

@@ -4,7 +4,12 @@
             <div class="empty-list" ng-if="lists.length === 0">
                 No list has been created yet.
             </div>
-            <todo-list title="{{list.name}}" description="This is a test description." ng-repeat="(listKey, list) in lists"></todo-list>
+            <todo-list ng-repeat="(key, list) in lists">
+                <todo-list-header title="list.name" description="list.description" update="#!/update/{{key}}"></todo-list-header>
+                <todo-list-items>
+                    <todo-list-item title="item.name" description="item.description" completed="item.completed" ng-repeat="item in list.items"></todo-list-item>
+                </todo-list-items>
+            </todo-list>
         </div>
     </div>
 </div>

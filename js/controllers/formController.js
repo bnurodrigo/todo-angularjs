@@ -2,7 +2,7 @@ angular.module('todoList').controller('formController', ['$scope', '$location', 
     $scope.list = null === listKey ? { items: [] } : listService.getLists()[listKey];
 
     $scope.addItem = function (list) {
-        list.items.push({ description: "", completed: false });
+        list.items.push({ name: "", description: "", completed: false });
     };
 
     $scope.removeItem = function (list, index) {
